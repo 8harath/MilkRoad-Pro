@@ -29,16 +29,13 @@ export default function NewsletterCard({ id, title, date }: NewsletterCardProps)
       >
         {/* Neo-Brutalism Card */}
         <div
-          className={`relative bg-background rounded-md ${
+          className={`relative bg-background rounded-md transition-all duration-150 ease-out ${
             isPressed
-              ? 'border-4 border-foreground translate-y-2'
+              ? 'border-3 border-foreground translate-y-1 neo-shadow-sm'
               : isHovered
-                ? 'border-4 border-foreground -translate-y-1 neo-shadow'
-                : 'border-3 border-foreground/60 neo-shadow-sm'
+                ? 'border-3 border-foreground -translate-y-1 neo-shadow'
+                : 'border-3 border-foreground/80 neo-shadow-sm'
           }`}
-          style={{
-            transition: 'all 0.15s cubic-bezier(0.4, 0.0, 0.2, 1)'
-          }}
         >
           {/* Content - Minimal & Bold */}
           <div className="relative p-5 sm:p-7">
