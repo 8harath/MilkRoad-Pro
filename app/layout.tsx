@@ -1,13 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import AppWrapper from "@/components/app-wrapper"
 import { generateSEOMetadata, viewport, SEO_KEYWORDS, SEO_CONFIG } from "@/lib/seo"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
@@ -69,7 +66,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className="antialiased font-sans">
         <AppWrapper>
           <Navigation />
           <main className="min-h-screen">{children}</main>

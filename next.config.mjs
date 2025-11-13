@@ -12,9 +12,6 @@ const nextConfig = {
     '/archive': ['./public/newsletters/**/*'],
   },
   
-  // Explicitly include public directory in output
-  outputFileTracing: true,
-  
   // Security headers for SEO trust signals
   async headers() {
     return [
